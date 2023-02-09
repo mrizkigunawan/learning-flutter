@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './page_dua.dart';
 
 class PageSatu extends StatelessWidget {
   const PageSatu({Key? key}) : super(key: key);
@@ -22,13 +21,7 @@ class PageSatu extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) {
-                return const PageDua();
-              },
-            ),
-          );
+          Navigator.of(context).pushNamed('/page_dua');
         },
         child: const Icon(
           Icons.keyboard_arrow_right,

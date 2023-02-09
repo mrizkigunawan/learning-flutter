@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/pages/page_dua.dart';
 import './pages/page_satu.dart';
 
 void main() {
@@ -10,8 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: PageSatu(),
+    return MaterialApp(
+      home: const PageSatu(),
+      initialRoute: '/page_satu',
+      routes: {
+        '/page_satu': (context) => const PageSatu(),
+        '/page_dua': (context) => const PageDua(),
+      },
     );
   }
 }
